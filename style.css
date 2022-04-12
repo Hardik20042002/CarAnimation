@@ -1,0 +1,95 @@
+*{
+ padding: 0px;
+ margin: 0px;
+}
+section{
+ height: 100vh;
+ width: 100vw;
+ position: relative;
+ background-image: url(https://github.com/Hardik20042002/CarAnimation/blob/main/Images/sky.jpg?raw=true);
+ overflow-x: hidden;
+}
+#city{
+ width: 500vw;
+ position: absolute;
+ left: 0px;
+ bottom: 300px;
+ animation-name: citymove;
+ animation-duration: 20s;
+ animation-iteration-count: infinite;
+ animation-direction: normal;
+ animation-timing-function: linear;
+}
+#road{
+ width: 500%;
+ position: absolute;
+ left: 0px;
+ bottom: 0px;
+ animation-name: roadmove;
+ animation-duration: 20s;
+ animation-iteration-count: infinite;
+ animation-direction: normal;
+ animation-timing-function: linear;
+}
+#car{
+ position: absolute;
+ left: 400px;
+ bottom: 125px;
+ animation-name: lift;
+ animation-duration: 0.7s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+}
+#tyre1{
+ position: absolute;
+ left: 503px;
+ bottom: 175px;
+ animation-name: rotate;
+ animation-duration: 0.2s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+ animation-direction: reverse;
+}
+#tyre2{
+ position: absolute;
+ right: 553px;
+ bottom: 172px;
+ animation-name: rotate;
+ animation-duration: 0.2s;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+ animation-timing-function: linear;
+ animation-direction: reverse;
+}
+@keyframes rotate {
+ from{
+  transform: rotate(0deg);
+ }
+ to{
+  transform: rotate(360deg);
+ }
+}
+@keyframes lift {
+ from{
+  transform: translateY(0px);
+ }
+ to{
+  transform: translateY(5px);
+ }
+}
+@keyframes citymove {
+ from{
+  transform: translateX(0px);
+ }
+ to{
+  transform: translateX(-3400px);
+ }
+}
+@keyframes roadmove {
+ from{
+  transform: translateX(0px);
+ }
+ to{
+  transform: translateX(-3400px);
+ }
+}
